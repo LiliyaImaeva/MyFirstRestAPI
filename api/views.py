@@ -53,6 +53,7 @@ class UserDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
+# список ролей
 class RoleList(APIView):
     def get(self, request):
         role = Roles.objects.all()
@@ -60,6 +61,7 @@ class RoleList(APIView):
         return Response(serializer.data)
 
 
+# список пользвателей с ролью
 class RoleDetail(APIView):
     def get(self, request, pk):
         user = Users.objects.filter(roles=pk)
