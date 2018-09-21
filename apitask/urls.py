@@ -25,5 +25,4 @@ urlpatterns = [
     path('users/<int:pk>/', views.UserDetail.as_view(), name='get_put_delete_user'),
     path('roles/', views.RoleList.as_view()),
     path('roles/<str:pk>/users/', views.RoleDetail.as_view()),
-    path('roles/<str:pk>/usersss/', views.RoleDetail.as_view()),
 ]
